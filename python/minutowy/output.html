@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+window.onload = function() {
+var
+                    currentColor = "red";
+setInterval(function() {
+
+                    document.body.style.backgroundColor =
+                    currentColor;
+currentColor = currentColor ==="red" ?
+                    "black" : "red";
+}, 1000);
+};
+</script>
+<title>Minutowe Tabelki</title>
+</head>
+<body>
+<table border="1" align="left" style="margin-left:50px"
+    style="background-color:white">
+<tr><td>sshd</td><td>running</td></tr>
+<tr><td>httpd</td><td>done</td></tr>
+<tr><td>vsftpd</td><td>running</td></tr>
+<tr><td>mysql</td><td>error</td></tr>
+</table>
+<table border="1" align="left" style="margin-left:50px"
+    style="background-color:white">
+<tr><td>server</td><td>misio</td></tr>
+<tr><td>tluszczyk</td><td>ok</td></tr>
+</table>
+</body>
+</html>
