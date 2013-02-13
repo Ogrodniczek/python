@@ -1,0 +1,31 @@
+
+body {
+    font-family: Arial, Helvetica, Verdana;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000;
+    background-color: #000000;
+    }
+table {
+    margin:20px 20px 20px 20px;
+    float:left;
+    background-color:#fff;
+    border-collapse:collapse;
+    vertical-align: left;
+    }
+td{
+    padding: 10px 10px 10px 10px;
+}
+table, td, th {
+    text-align:center;
+    border: 1px solid black;
+}
+.bloczek {
+    display:block;
+    overflow:hidden;
+    width:900px;
+    min-height:500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:60px;
+}

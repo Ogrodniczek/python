@@ -1,0 +1,4 @@
+sshd=running
+httpd=done
+vsftpd=running
+mysql=error
