@@ -30,24 +30,32 @@ def errorTest():
                     document.body.style.backgroundColor =
                     currentColor;\ncurrentColor = currentColor ==="red" ?
                     "black" : "red";\n}, 1000);\n};\n</script>\n'''
+def kolorki(wynik):
+    if wynik == 'running':
+        return '<td bgcolor="#00CC00">' + wynik + '</td>'
+    elif wynik == 'done':
+        return '<td bgcolor="0099CC">' + wynik + '</td>'
+    elif wynik == 'error':
+        return '<td bgcolor="FF0000">' + wynik + '</td>'
+    else:
+        return '<td>' + wynik + '</td>'
+
 
 file = open('output.html','w+')
 file.write('<html>\n')
 file.write('<head>\n')
-file.write(errorTest())
 file.write('<title>Minutowe Tabelki</title>\n')
 file.write('</head>\n')
 file.write('<body>\n')
 
 for plik in pliki:
     tabela = splitStrip(plik, strip, dane)
-    file.write('''<table border="1" align="left" style="margin-left:50px"
-    style="background-color:white">\n''')
+    file.write('''<table border="1" align="left" style="margin-left:50px">\n''')
     for i in range(0,len(tabela)):
         file.write('<tr>')
         tabela2 = tabela[i]
         for j in range(0,len(tabela2)):
-            file.write('<td>' + tabela2[j] + '</td>')
+            file.write(kolorki(tabela2[j]))
         file.write('</tr>\n')
     file.write('</table>\n')
 
